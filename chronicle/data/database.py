@@ -16,7 +16,7 @@ class Database:
 
     def connect(self) -> None:
         """Connect to the database and create tables if needed."""
-        self.conn = sqlite3.connect(self.db_path)
+        self.conn = sqlite3.connect(self.db_path, check_same_thread=False)
         self._create_tables()
 
     def close(self) -> None:

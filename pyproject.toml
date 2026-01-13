@@ -9,7 +9,12 @@ description = "A mythic cyclical civilization simulator with emergent gods"
 readme = "README.md"
 requires-python = ">=3.10"
 license = {text = "MIT"}
-dependencies = []
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.32.0",
+    "websockets>=14.0",
+    "pydantic>=2.10.0",
+]
 
 [project.optional-dependencies]
 dev = [
@@ -26,4 +31,4 @@ python_files = "test_*.py"
 python_functions = "test_*"
 
 [tool.setuptools.packages.find]
-include = ["chronicle*"]
+include = ["chronicle*", "backend*"]
